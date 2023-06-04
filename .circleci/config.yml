@@ -28,6 +28,7 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: cat ~/output.txt
+      - print_pipeline_id
     
   # say-hello:
   #   # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
