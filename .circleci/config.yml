@@ -6,6 +6,10 @@ orbs:
   welcome: circleci/welcome-orb@0.4.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/configuration-reference/#jobs
+commands:
+  print_pipeline_id:
+    steps:
+      - run: echo ${CIRCLE_WORKFLOW_ID}
 jobs:
   save_hello_world_output:
       docker: 
@@ -24,6 +28,7 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: cat ~/output.txt
+      - print_pipeline_id
     
   # say-hello:
   #   # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
@@ -68,12 +73,5 @@ workflows:
       # - print_world:
       #     requires:
       #       - print_hello
-
-      - save_hello_world_output
-      - print_output_file:
-          requires:
-            - save_hello_world_output
-
-
-
-
+       - save_hello_world_output
+       - print_output_file
