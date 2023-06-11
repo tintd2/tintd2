@@ -99,7 +99,7 @@ jobs:
       - run:
           name: Configure server
           command: |
-            ansible-playbook -i inventory.txt main4.yml -c paramiko -u deploy
+            ansible-playbook -i inventory.txt main4.yml -c paramiko -u ubuntu
 
   # Exercise: Smoke Testing
   smoke_test:
