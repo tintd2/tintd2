@@ -1,2 +1,2 @@
 [all]
-ec2-44-202-1-139.compute-1.amazonaws.com
+44.202.1.139
