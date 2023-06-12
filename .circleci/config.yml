@@ -100,7 +100,7 @@ jobs:
       - run:
           name: Configure server
           command: |
-            ping 34.238.234.201
+            sudo ping 34.238.234.201
             # ansible-playbook # -i inventory.txt main4.yml
 
   # Exercise: Smoke Testing
