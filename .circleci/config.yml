@@ -100,7 +100,7 @@ jobs:
       - run:
           name: Configure server
           command: |
-            ssh ubuntu@34.238.234.201
+            ssh -o StrictHostKeyChecking=no -l  ubuntu@34.238.234.201
             # ansible-playbook # -i inventory.txt main4.yml
 
   # Exercise: Smoke Testing
