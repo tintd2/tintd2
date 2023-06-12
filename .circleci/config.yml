@@ -100,7 +100,7 @@ jobs:
       - run:
           name: Configure server
           command: |
-            ssh ubuntu@ec2-34-238-234-201.compute-1.amazonaws.com
+            ping 34.238.234.201
             # ansible-playbook # -i inventory.txt main4.yml
 
   # Exercise: Smoke Testing
