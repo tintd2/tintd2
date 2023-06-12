@@ -1,2 +1,2 @@
 [all]
-3.94.82.57
+ec2-3-94-82-57.compute-1.amazonaws.com
