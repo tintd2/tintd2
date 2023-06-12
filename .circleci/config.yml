@@ -96,11 +96,11 @@ jobs:
           name: Install dependencies
           command: |
             # install the dependencies needed for your playbook
-            apk add --update ansible 
+            apk add --update ansible openssh
       - run:
           name: Configure server
           command: |
-            ping 34.238.234.201
+            ssh ubuntu@34.238.234.201
             # ansible-playbook # -i inventory.txt main4.yml
 
   # Exercise: Smoke Testing
