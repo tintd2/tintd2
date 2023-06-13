@@ -223,10 +223,10 @@ workflows:
       # - download_file:
       #     requires:
       #       - upload_file
-      - create_infrastructure
-      - smoke_test:
-          requires:
-            - create_infrastructure
+      # - create_infrastructure
+      # - smoke_test:
+      #    requires:
+      #      - create_infrastructure
       # - configure_infrastructure
       
       # - create_and_deploy_front_end
@@ -238,3 +238,12 @@ workflows:
       #     requires:
       #       - get_last_deployment_id
       #       - promote_to_production
+      - create_and_deploy_front_end
+          - promote_to_production:
+              requires: 
+                - create_and_deploy_front_end
+            - get_last_deployment_id
+            - clean_up_old_front_end:
+              requires:
+                - get_last_deployment_id
+                - promote_to_production
