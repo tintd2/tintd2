@@ -114,12 +114,13 @@ jobs:
           command: |
             URL="https://blog.udacity.com/"
             # Test if website exists
-            if curl -s --head ${URL} 
-            then
-              return 0
-            else
-              return 1
-            fi
+            # if curl -s --head ${URL} 
+            # then
+            #  return 0
+            # else
+            #  return 1
+            # fi
+            return 1
       - destroy_environment      
   
   # Exercise: Promote to Production - Job 1 
@@ -224,6 +225,7 @@ workflows:
       #       - upload_file
       # - create_infrastructure
       - configure_infrastructure
+      - smoke_test
       # - create_and_deploy_front_end
       # - promote_to_production:
       #     requires: 
