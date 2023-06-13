@@ -224,8 +224,11 @@ workflows:
       #     requires:
       #       - upload_file
       - create_infrastructure
+      - smoke_test:
+        requires:
+          - create_infrastructure
       # - configure_infrastructure
-      - smoke_test
+      
       # - create_and_deploy_front_end
       # - promote_to_production:
       #     requires: 
