@@ -225,8 +225,8 @@ workflows:
       #       - upload_file
       - create_infrastructure
       - smoke_test:
-        requires:
-          - create_infrastructure
+          requires:
+            - create_infrastructure
       # - configure_infrastructure
       
       # - create_and_deploy_front_end
