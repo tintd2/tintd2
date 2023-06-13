@@ -1,3 +1,4 @@
+[![CircleCI](https://dl.circleci.com/insights-snapshot/gh/tintd2/tintd2/main/my_workflow/badge.svg?window=30d)](https://app.circleci.com/insights/github/tintd2/tintd2/workflows/my_workflow/overview?branch=main&reporting-window=last-30-days&insights-snapshot=true)
 - 👋 Hi, I’m @tintd2
 - 👀 I’m interested in create code by coffee.
 - 🌱 I’m currently learning aws developer at udacity.
